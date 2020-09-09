@@ -2,7 +2,7 @@
 //  Store.swift
 //  HelloRedux
 //
-//  Created by Mohammad Azam on 9/8/20.
+//  Created by Mohammad Azam on 9/9/20.
 //  Copyright © 2020 Mohammad Azam. All rights reserved.
 //
 
@@ -10,16 +10,15 @@ import Foundation
 
 typealias Reducer = (State, Action) -> State
 
-protocol Action { }
-
-struct IncrementAction: Action { }
-
 struct State {
     var counter = 0
 }
 
+protocol Action { }
+
+struct IncrementAction: Action { }
+
 func reducer(state: State, action: Action) -> State {
-    
     var state = state
     
     switch action {
@@ -28,13 +27,14 @@ func reducer(state: State, action: Action) -> State {
         default:
             break
     }
+    
     return state
 }
 
 class Store: ObservableObject {
     
     var reducer: Reducer
-    @Published var state: State
+    @Published private (set) var state: State
     
     init(reducer: @escaping Reducer, state: State = State()) {
         self.reducer = reducer
