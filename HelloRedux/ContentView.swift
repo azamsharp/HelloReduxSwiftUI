@@ -14,10 +14,13 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("\(store.state.counter)")
             
-            Button("Increment") {
-                self.store.dispatch(action: IncrementAction())
+            List(store.state.movies, id: \.imdbId) { movie in
+                Text(movie.title)
+            }
+            
+            Button("Get Movies") {
+                self.store.dispatch(action: GetMoviesAction())
             }
         }
     }

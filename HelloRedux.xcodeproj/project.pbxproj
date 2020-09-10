@@ -14,6 +14,9 @@
 		8DBD5C5A2508117F001DCB80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBD5C592508117F001DCB80 /* Assets.xcassets */; };
 		8DBD5C5D25081180001DCB80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBD5C5C25081180001DCB80 /* Preview Assets.xcassets */; };
 		8DBD5C6025081180001DCB80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DBD5C5E25081180001DCB80 /* LaunchScreen.storyboard */; };
+		8DC67510250A8E8C0016B26A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6750F250A8E8C0016B26A /* Constants.swift */; };
+		8DE179502509B1C2003B9AA4 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE1794F2509B1C2003B9AA4 /* Movie.swift */; };
+		8DE179532509B318003B9AA4 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE179522509B318003B9AA4 /* MovieService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		8DBD5C5C25081180001DCB80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8DBD5C5F25081180001DCB80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DBD5C6125081180001DCB80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC6750F250A8E8C0016B26A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8DE1794F2509B1C2003B9AA4 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		8DE179522509B318003B9AA4 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 		8DBD5C522508117B001DCB80 /* HelloRedux */ = {
 			isa = PBXGroup;
 			children = (
+				8DC6750E250A8E800016B26A /* Utils */,
+				8DE179512509B30A003B9AA4 /* Services */,
+				8DE1794E2509B1B4003B9AA4 /* Models */,
 				8DBD5C672508534C001DCB80 /* Store */,
 				8DBD5C532508117B001DCB80 /* AppDelegate.swift */,
 				8DBD5C552508117B001DCB80 /* SceneDelegate.swift */,
@@ -84,6 +93,30 @@
 				8D6FB8F525096924006518A8 /* Store.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		8DC6750E250A8E800016B26A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8DC6750F250A8E8C0016B26A /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8DE1794E2509B1B4003B9AA4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8DE1794F2509B1C2003B9AA4 /* Movie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8DE179512509B30A003B9AA4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8DE179522509B318003B9AA4 /* MovieService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,10 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE179532509B318003B9AA4 /* MovieService.swift in Sources */,
 				8DBD5C542508117B001DCB80 /* AppDelegate.swift in Sources */,
 				8DBD5C562508117B001DCB80 /* SceneDelegate.swift in Sources */,
 				8DBD5C582508117B001DCB80 /* ContentView.swift in Sources */,
+				8DC67510250A8E8C0016B26A /* Constants.swift in Sources */,
 				8D6FB8F625096924006518A8 /* Store.swift in Sources */,
+				8DE179502509B1C2003B9AA4 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
